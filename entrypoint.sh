@@ -9,4 +9,4 @@ git config credential.helper '!f() {
 }; f'
 
 trap "rm -f ~/.git-credentials" EXIT
-exec git $@
+git $@
