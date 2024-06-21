@@ -8,5 +8,4 @@ git config credential.helper '!f() {
     echo "password=${GIT_PASSWORD}"; 
 }; f'
 
-trap "rm -f ~/.git-credentials" EXIT
-git $@
+exec git $@
