@@ -2,7 +2,7 @@
 set -e
 
 git config --global --add safe.directory '*';
-git config credential.helper '!f() { 
+git config --global credential.helper '!f() { 
     sleep 1; 
     echo "username=${GIT_USERNAME}"; 
     echo "password=${GIT_PASSWORD}"; 
