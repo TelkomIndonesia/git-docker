@@ -8,4 +8,8 @@ git config --global credential.helper '!f() {
     echo "password=${GIT_PASSWORD}"; 
 }; f'
 
+if [ "--" == "${1:-""}"  ]; then 
+    exec $@
+fi
+
 exec git $@
