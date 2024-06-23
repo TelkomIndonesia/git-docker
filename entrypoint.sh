@@ -9,7 +9,7 @@ git config --global credential.helper '!f() {
 }; f'
 
 if [ "--" == "${1:-""}"  ]; then 
-    exec $@
+    exec "$@"
 fi
 
-exec git $@
+exec git "$@"
